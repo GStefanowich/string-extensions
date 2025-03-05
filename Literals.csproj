@@ -9,7 +9,7 @@
         <OutputType>Library</OutputType>
         
         <!-- NuGet -->
-        <PackageId>TheElm.MySql</PackageId>
+        <PackageId>TheElm.Literals</PackageId>
         <Version>1.0.0</Version>
         
         <PublishRelease>true</PublishRelease>
@@ -17,14 +17,14 @@
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         
         <!-- Package Information -->
-        <ProductName>TheElm.MySql</ProductName>
+        <ProductName>TheElm.Literals</ProductName>
         <Authors>Greg Stefanowich</Authors>
-        <Description>Library for combing LINQ and MySqlConnector</Description>
+        <Description>C# String extension methods</Description>
         
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageProjectUrl>https://github.com/GStefanowich/mysql-extensions</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/GStefanowich/mysql-extensions</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/GStefanowich/string-extensions</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/GStefanowich/string-extensions</RepositoryUrl>
         <PackageTags>json</PackageTags>
         <NeutralLanguage>en</NeutralLanguage>
     </PropertyGroup>
