@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 
 namespace TheElm.Literals {
-    public static class Literals {
+    public static partial class Literals {
         #region Constants
         
         public const string NUMBERIC = "0123456789";
