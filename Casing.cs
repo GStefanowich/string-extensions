@@ -16,20 +16,23 @@ namespace TheElm.Literals {
             return new string(array);
         }
         
-        private static string RandomCase( this TextInfo info, string str ) {
-            System.Random random = new();
-            return str.Select(c => info.RandomCase(c, random)).JoinToString();
+        extension( TextInfo info ) {
+            private string RandomCase( string str ) {
+                Random random = Random.Shared;
+                return str.Select(c => info.RandomCase(c, random)).JoinToString();
+            }
+            
+            private char RandomCase( char val )
+                => info.RandomCase(val, Random.Shared);
+            
+            private char RandomCase( char val, Random random )
+                => random.NextDouble() >= 0.5 ? info.ToUpper(val) : info.ToLower(val);
         }
-        
-        private static char RandomCase( this TextInfo info, char val )
-            => info.RandomCase(val, new System.Random());
-        
-        private static char RandomCase( this TextInfo info, char val, System.Random random )
-            => random.NextDouble() >= 0.5 ? info.ToUpper(val) : info.ToLower(val);
         
         private static string CamelCase( this string str ) {
             if (string.IsNullOrEmpty(str))
                 return str;
+            
             return string.Join(".", str.Split('.')
                 .Select(part => char.ToLowerInvariant(part[0]) + part[1..]));
         }

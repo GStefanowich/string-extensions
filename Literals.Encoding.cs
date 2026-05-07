@@ -14,16 +14,18 @@ namespace TheElm.Literals {
         private static char[] Rot13( this IEnumerable<char> array )
             => array.Select(s => (char)(( s >= 97 && s <= 122 ) ? ( (s + 13 > 122 ) ? s - 13 : s + 13) : ( s >= 65 && s <= 90 ? (s + 13 > 90 ? s - 13 : s + 13) : s ))).ToArray();
         
-        public static string Base64Encode( this string encode )
-            => encode.Base64Encode(Encoding.UTF8);
-        
-        public static string Base64Encode( this string encode, Encoding encoding )
-            => Convert.ToBase64String(encoding.GetBytes(encode));
-        
-        public static string Base64Decode( this string decode )
-            => decode.Base64Decode(Encoding.UTF8);
-        
-        public static string Base64Decode( this string decode, Encoding encoding )
-            => encoding.GetString(Convert.FromBase64String(decode));
+        extension( string encode ) {
+            public string Base64Encode()
+                => encode.Base64Encode(Encoding.UTF8);
+            
+            public string Base64Encode( Encoding encoding )
+                => Convert.ToBase64String(encoding.GetBytes(encode));
+            
+            public string Base64Decode()
+                => encode.Base64Decode(Encoding.UTF8);
+            
+            public string Base64Decode( Encoding encoding )
+                => encoding.GetString(Convert.FromBase64String(encode));
+        }
     }
 }

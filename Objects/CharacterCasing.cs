@@ -5,6 +5,6 @@ namespace TheElm.Literals.Objects {
         UPPER,
         TITLE,
         CAMEL,
-        RANDOM
+        RANDOM,
     }
 }
