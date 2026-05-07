@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>TheElm.Literals</RootNamespace>
@@ -27,6 +27,7 @@
         <RepositoryUrl>https://github.com/GStefanowich/string-extensions</RepositoryUrl>
         <PackageTags>strings</PackageTags>
         <NeutralLanguage>en</NeutralLanguage>
+        <LangVersion>14</LangVersion>
     </PropertyGroup>
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath=""/>
